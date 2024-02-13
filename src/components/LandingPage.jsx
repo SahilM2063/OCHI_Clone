@@ -1,15 +1,32 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import contentImage from "../assets/images/content.jpg";
 
 const LandingPage = () => {
   return (
     <div className="w-full h-screen bg-[#F1F1F1] pt-1">
       <div className="text-structure mt-40 px-12 font-[FoundersGroteskSemiBold]">
-        <div className="text-masker text-9xl leading-[6vw]">WE CREATE</div>
-        <div className="text-masker text-9xl leading-[6vw]">EYE-OPENING</div>
-        <div className="text-masker text-9xl leading-[6vw]">PRESENTATIONS</div>
+        {["WE CREATE", "EYE-OPENING", "PRESENTATIONS"].map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="text-masker text-9xl leading-[6vw] h-[6vw] flex items-end gap-3"
+            >
+              {index === 1 && (
+                <div className="w-[8vw] h-[5.3vw] bg-red-300 rounded-lg overflow-hidden">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={contentImage}
+                    alt="content_image"
+                  />
+                </div>
+              )}
+              {item}
+            </div>
+          );
+        })}
       </div>
-      <div className="border-t-[1px] border-[#B2B2B2] mt-32 flex justify-between items-center px-12 py-4">
+      <div className="border-t-[1px] relative border-[#B2B2B2] mt-32 flex justify-between items-center px-12 py-4">
         {[
           "For public and private companies",
           "From the first pitch to IPO",
@@ -54,6 +71,9 @@ const LandingPage = () => {
             </svg>
           </span>
         </div>
+        <span className="scroll-down-btn absolute left-[50%] -translate-x-[50] mt-44 font-[NeueMontrealRegular] text-sm tracking-wide opacity-40 animate-bounce">
+          Scroll down
+        </span>
       </div>
     </div>
   );
