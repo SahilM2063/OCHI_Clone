@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: NeueMontrealLight;
+    src: url("./assets/fonts/NeueMontrealLight300.otf");
+}
+
+@font-face {
+    font-family: NeueMontrealRegular;
+    src: url("./assets/fonts/NeueMontrealRegular400.otf");
+}
+
+@font-face {
+    font-family: NeueMontrealItalic;
+    src: url("./assets/fonts/NeueMontrealItalic400.otf");
+}
+
+@font-face {
+    font-family: NeueMontrealMedium;
+    src: url("./assets/fonts/NeueMontrealMedium500.otf");
+}
+
+@font-face {
+    font-family: NeueMontrealBold;
+    src: url("./assets/fonts/NeueMontrealBold700.otf");
+}
+
+/* Link Hover Animation */
+
+.text {
+    overflow: hidden;
+    position: relative;
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+}
+
+.text:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.text:hover .letter,
+.text.play .letter {
+    transform: translateY(-100%);
+}
+
+.text .letter {
+    display: inline-block;
+    transition: transform 0.28s ease-in-out;
+}

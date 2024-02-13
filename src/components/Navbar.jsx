@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
+import "../utils/HoverAnimation.js";
 
 const LogoSvg = (
   <svg
@@ -32,7 +33,38 @@ const LogoSvg = (
   </svg>
 );
 
+const HoverAnimation = () => {
+  let elements = document.querySelectorAll(".text");
+
+  elements.forEach((element) => {
+    let innerText = element.innerText;
+    element.innerHTML = "";
+
+    let textContainer = document.createElement("div");
+    textContainer.classList.add("block");
+
+    for (let letter of innerText) {
+      let span = document.createElement("span");
+      span.innerText = letter.trim() === "" ? "\xa0" : letter;
+      span.classList.add("letter");
+      textContainer.appendChild(span);
+    }
+
+    element.appendChild(textContainer);
+    element.appendChild(textContainer.cloneNode(true));
+  });
+
+  elements.forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.classList.remove("play");
+    });
+  });
+};
+
 const Navbar = () => {
+  useEffect(() => {
+    HoverAnimation();
+  });
   return (
     <div className="w-full px-16 py-6 flex justify-between items-center">
       <div className="logo">{LogoSvg}</div>
@@ -42,7 +74,7 @@ const Navbar = () => {
             return (
               <a
                 key={index}
-                className={`font-[gilroy] font-normal text-lg cursor-pointer capitalize ${
+                className={`text font-[NeueMontrealRegular] h-6 text-base tracking-wide cursor-pointer ${
                   index === 4 && "ml-40"
                 }
                 `}
