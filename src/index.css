@@ -32,6 +32,11 @@
     src: url("./assets/fonts/NeueMontrealBold700.otf");
 }
 
+@font-face {
+    font-family: FoundersGroteskSemiBold;
+    src: url("./assets/fonts/FoundersGrotesk-Semibold.ttf");
+}
+
 /* Link Hover Animation */
 
 .text {
@@ -46,8 +51,8 @@
     height: 1px;
     bottom: 0;
     right: 0;
-    background-color: black;
-    transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+    background-color: #212121;
+    transition: all 0.6s cubic-bezier(.215, .61, .355, 1);
 }
 
 .text:hover:after {
@@ -63,4 +68,22 @@
 .text .letter {
     display: inline-block;
     transition: transform 0.28s ease-in-out;
+}
+
+/* Button Hovering */
+
+.buttons .btn:hover {
+    background-color: #212121;
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons .btn:hover+.arrow {
+    background-color: #212121;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons .btn:hover+.arrow>svg {
+    stroke: #FFF;
+    transition: all 0.3s ease-in-out;
 }

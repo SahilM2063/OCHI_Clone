@@ -4,7 +4,7 @@ import "../utils/HoverAnimation.js";
 
 const LogoSvg = (
   <svg
-    width="72"
+    width="46"
     height="30"
     viewBox="0 0 72 30"
     fill="none"
@@ -66,16 +66,16 @@ const Navbar = () => {
     HoverAnimation();
   });
   return (
-    <div className="w-full px-16 py-6 flex justify-between items-center">
-      <div className="logo">{LogoSvg}</div>
+    <div className="fixed z-[999] w-full px-12 py-4 flex justify-between items-center">
+      <div className="logo cursor-pointer">{LogoSvg}</div>
       <div className="links flex gap-10">
         {["Services", "Our Work", "About Us", "Insights", "Contact"].map(
           (item, index) => {
             return (
               <a
                 key={index}
-                className={`text font-[NeueMontrealRegular] h-6 text-base tracking-wide cursor-pointer ${
-                  index === 4 && "ml-40"
+                className={`text font-[NeueMontrealRegular] text-[#212121] h-6 text-base tracking-wide cursor-pointer ${
+                  index === 4 && "ml-48"
                 }
                 `}
               >
