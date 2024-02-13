@@ -69,7 +69,7 @@ const Navbar = () => {
     <div className="fixed z-[999] w-full px-12 py-4 flex justify-between items-center">
       <div className="logo cursor-pointer">{LogoSvg}</div>
       <div className="links flex gap-10">
-        {["Services", "Our Work", "About Us", "Insights", "Contact"].map(
+        {["Services", "Our Work", "About Us", "Insights", "Contact Us"].map(
           (item, index) => {
             return (
               <a

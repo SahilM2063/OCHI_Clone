@@ -4,7 +4,11 @@ import contentImage from "../assets/images/content.jpg";
 
 const LandingPage = () => {
   return (
-    <div className="w-full h-screen bg-[#F1F1F1] pt-1">
+    <div
+      data-scroll
+      data-scroll-speed="-30"
+      className="w-full h-screen bg-[#F1F1F1] pt-1 overflow-hidden"
+    >
       <div className="text-structure mt-40 px-12 font-[FoundersGroteskSemiBold]">
         {["WE CREATE", "EYE-OPENING", "PRESENTATIONS"].map((item, index) => {
           return (
@@ -71,7 +75,7 @@ const LandingPage = () => {
             </svg>
           </span>
         </div>
-        <span className="scroll-down-btn absolute left-[50%] -translate-x-[50] mt-44 font-[NeueMontrealRegular] text-sm tracking-wide opacity-40 animate-bounce">
+        <span className="scroll-down-btn absolute left-[50%] -translate-x-[50] mt-44 font-[NeueMontrealRegular] tracking-wide opacity-35 animate-bounce">
           Scroll down
         </span>
       </div>
