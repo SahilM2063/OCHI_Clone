@@ -4,8 +4,8 @@ import "./styles/locomotive-Scroll.css";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Slider from "./components/Slider";
-import Blank from "./components/Blank";
 import LocomotiveScroll from "locomotive-scroll";
+import About from "./components/About";
 
 function App() {
   let scrollRef = useRef(null);
@@ -14,8 +14,6 @@ function App() {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
       smooth: true,
-      lerp: 0.06,
-      multiplier: 0.5,
     });
 
     return () => {
@@ -29,7 +27,7 @@ function App() {
         <Navbar />
         <LandingPage />
         <Slider />
-        <Blank />
+        <About />
       </div>
     </div>
   );
