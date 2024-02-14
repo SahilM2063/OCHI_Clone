@@ -18,7 +18,10 @@ const removeAnimation = () => {
 
 const About = () => {
   return (
-    <div className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl">
+    <div
+      data-scroll
+      className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl"
+    >
       <h1 className="w-full px-20 pb-14 text-[3.5vw] font-[NeueMontrealRegular] leading-none">
         Ochi is a strategic partner for fast-growing tech <br />
         businesses that need to <span className="abt-text">raise funds,</span>

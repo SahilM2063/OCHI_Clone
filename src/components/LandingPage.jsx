@@ -6,7 +6,6 @@ const LandingPage = () => {
   return (
     <div
       data-scroll
-      data-scroll-speed="-4"
       className="w-full h-screen bg-[#F1F1F1] pt-1 overflow-hidden"
     >
       <div className="text-structure mt-40 px-12 font-[FoundersGroteskSemiBold]">
