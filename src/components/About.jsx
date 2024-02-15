@@ -21,7 +21,7 @@ const About = () => {
     <div
       data-scroll
       data-scroll-speed="-1.5"
-      className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl z-20"
+      className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl"
     >
       <h1 className="w-full px-20 pb-14 text-[3.5vw] font-[NeueMontrealRegular] leading-[3.7vw]">
         Ochi is a strategic partner for fast-growing tech <br />

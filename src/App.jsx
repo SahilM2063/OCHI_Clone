@@ -6,6 +6,8 @@ import LandingPage from "./components/LandingPage";
 import Slider from "./components/Slider";
 import About from "./components/About";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import EyesSection from "./components/EyesSection";
+import Projects from "./components/Projects";
 
 function App() {
   const scrollRef = useRef(null);
@@ -35,6 +37,8 @@ function App() {
           <LandingPage />
           <Slider />
           <About />
+          <EyesSection />
+          <Projects />
         </div>
       </main>
     </LocomotiveScrollProvider>
