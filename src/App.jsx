@@ -4,34 +4,40 @@ import "./styles/locomotive-Scroll.css";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Slider from "./components/Slider";
-import LocomotiveScroll from "locomotive-scroll";
 import About from "./components/About";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 function App() {
-  let scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.045,
-      multiplier: 0.5,
-    });
+  const options = {
+    smooth: true,
+  };
 
-    return () => {
-      scroll.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true,
+  //     lerp: 0.045,
+  //     multiplier: 0.5,
+  //   });
+
+  //   return () => {
+  //     scroll.destroy();
+  //   };
+  // }, []);
 
   return (
-    <div id="main" data-scroll-container ref={scrollRef}>
-      <div className="w-full min-h-screen bg-[#F1F1F1]">
-        <Navbar />
-        <LandingPage />
-        <Slider />
-        <About />
-      </div>
-    </div>
+    <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
+      <main data-scroll-container ref={scrollRef}>
+        <div className="w-full min-h-screen bg-[#F1F1F1]">
+          <Navbar />
+          <LandingPage />
+          <Slider />
+          <About />
+        </div>
+      </main>
+    </LocomotiveScrollProvider>
   );
 }
 

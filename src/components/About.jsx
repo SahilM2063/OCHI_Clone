@@ -20,14 +20,25 @@ const About = () => {
   return (
     <div
       data-scroll
-      className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl"
+      data-scroll-speed="-1.5"
+      className="w-full py-20 bg-[#CDEA68] rounded-ss-3xl rounded-se-3xl z-20"
     >
-      <h1 className="w-full px-20 pb-14 text-[3.5vw] font-[NeueMontrealRegular] leading-none">
+      <h1 className="w-full px-20 pb-14 text-[3.5vw] font-[NeueMontrealRegular] leading-[3.7vw]">
         Ochi is a strategic partner for fast-growing tech <br />
-        businesses that need to <span className="abt-text">raise funds,</span>
-        <span className="abt-text">sell products,</span> <br />
-        <span className="abt-text">explain complex ideas,</span> and
-        <span className="abt-text"> hire great people</span>.
+        businesses that need to{" "}
+        <span className="abt-text relative cursor-pointer">
+          raise funds
+        </span>,{" "}
+        <span className="abt-text relative cursor-pointer">sell products</span>,{" "}
+        <br />
+        <span className="abt-text relative cursor-pointer">
+          explain complex ideas
+        </span>
+        , and{" "}
+        <span className="abt-text relative cursor-pointer">
+          hire great people
+        </span>
+        .
       </h1>
 
       <div className="w-full h-[1px] bg-[#99AD53]"></div>
@@ -53,16 +64,16 @@ const About = () => {
           </div>
           <div className="info-right-links flex flex-col items-start self-end">
             <h6 className="links-title mb-4 text-lg tracking-wide">S:</h6>
-            <span className="text-link leading-7 tracking-wide cursor-pointer">
+            <span className="text-link relative leading-5 mb-2 tracking-wide cursor-pointer">
               Instagram
             </span>
-            <span className="text-link leading-7 tracking-wide cursor-pointer">
+            <span className="text-link relative leading-5 mb-2 tracking-wide cursor-pointer">
               Behance
             </span>
-            <span className="text-link leading-7 tracking-wide cursor-pointer">
+            <span className="text-link relative leading-5 mb-2 tracking-wide cursor-pointer">
               Facebook
             </span>
-            <span className="text-link leading-7 tracking-wide cursor-pointer">
+            <span className="text-link relative leading-5 mb-2 tracking-wide cursor-pointer">
               Linkedin
             </span>
           </div>
@@ -79,7 +90,7 @@ const About = () => {
           <div
             onMouseEnter={animateImagContainer}
             onMouseLeave={removeAnimation}
-            className="hover-btn group p-2 bg-[#212121] rounded-full text-white flex justify-between items-center gap-7 cursor-pointer"
+            className="hover-btn group p-2 bg-[#212121] hover:bg-black rounded-full text-white flex justify-between items-center gap-7 cursor-pointer"
           >
             <span className="font-[NeueMontrealRegular] tracking-wide pl-3 text-sm">
               READ MORE
