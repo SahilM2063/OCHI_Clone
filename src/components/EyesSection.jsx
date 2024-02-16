@@ -22,11 +22,7 @@ const EyesSection = () => {
       data-scroll-speed="0"
       className="w-full min-h-screen bg-[url('src/assets/images/eye-sec-bg.jpg')] bg-cover overflow-hidden flex justify-center items-center "
     >
-      <div
-        data-scroll
-        data-scroll-speed="5"
-        className="flex gap-10 cursor-pointer"
-      >
+      <div className="flex gap-10 cursor-pointer">
         <div className="eye w-[14vw] h-[14vw] rounded-full bg-white flex justify-center items-center">
           <div className="eye-black w-[58%] h-[58%] rounded-full bg-black relative flex justify-center items-center">
             <span className="z-10 font-[NeueMontrealRegular] text-xl text-white">

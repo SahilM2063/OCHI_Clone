@@ -4,11 +4,7 @@ import { motion } from "framer-motion";
 
 const Slider = () => {
   return (
-    <div
-      data-scroll
-      data-scroll-speed="0"
-      className="w-full bg-[#004D43] py-24 rounded-ss-3xl rounded-se-3xl"
-    >
+    <div className="w-full bg-[#004D43] py-24 rounded-ss-3xl rounded-se-3xl">
       <div className="slider-text border-t-[1px] border-b-[1px] border-[#4D837C] flex items-center whitespace-nowrap text-[#F1F1F1] font-[FoundersGroteskSemiBold] overflow-hidden">
         <motion.h1
           initial={{ x: 0 }}
