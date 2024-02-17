@@ -10,7 +10,7 @@ const Projects = () => {
     <div className="w-full min-h-screen bg-zinc-200 py-20">
       <div className="project-title w-full px-20 border-b-[1px] border-[#B2B2B2] pb-10">
         <h1 className="font-[NeueMontrealRegular] text-5xl tracking-wide">
-          Featured projects
+          Featured Projects
         </h1>
       </div>
       <div className="cards w-full px-20 mt-10 grid grid-cols-2 gap-x-8 gap-y-16">
@@ -202,8 +202,8 @@ const Projects = () => {
         </div>
       </div>
       <div className="hover-btn w-[18%] m-auto mt-14 group p-2 bg-[#212121] hover:bg-black rounded-full text-white flex justify-between items-center gap-7 cursor-pointer">
-        <span className="font-[NeueMontrealRegular] tracking-wide pl-3 text-sm">
-          VIEW ALL CASE STUDIES
+        <span className="font-[NeueMontrealRegular] tracking-wide pl-3 text-sm capitalize">
+          View all case studies
         </span>
         <div className="hover-btn-icon w-10 h-10 bg-white rounded-full scale-[0.23] group-hover:scale-[1] flex justify-center items-center transition ease-in-out duration-[0.4s]">
           <svg
